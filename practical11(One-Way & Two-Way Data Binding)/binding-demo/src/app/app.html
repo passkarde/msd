@@ -1,0 +1,22 @@
+<h2>One-Way & Two-Way Data Binding</h2>
+
+<!-- Two-Way Binding -->
+<label>Enter your name:</label>
+<input type="text" [(ngModel)]="name">
+
+<p>Hello, {{ name }}</p>
+
+<!-- ngIf Example -->
+<button (click)="showMessage = !showMessage">
+  Toggle Message
+</button>
+
+<p *ngIf="showMessage">Welcome to Angular Practical!</p>
+
+<!-- ngFor Example -->
+<h3>Subject List</h3>
+<ul>
+  <li *ngFor="let subject of subjects">
+    {{ subject }}
+  </li>
+</ul>
